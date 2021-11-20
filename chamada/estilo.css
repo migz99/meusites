@@ -1,0 +1,84 @@
+body {
+    background: cornflowerblue;
+    font: normal 12pt Arial;
+    color: white;
+}
+header {
+    text-align: center;
+}
+section {
+    background: white;
+    color: black;
+    position: relative;
+    margin: auto;
+    width: 250px;
+    padding: 10px;
+    border-radius: 2px;
+}
+section#res {
+    width: 360px;
+    height: 1885px;
+    position: relative;
+}
+form {
+    margin-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+    position: absolute;
+}
+table td,
+table th {
+    border: 2px solid black;
+    padding: 10px;
+}
+table#faltou {
+    right: 10px;
+}
+table#faltou th,
+table#faltou td {
+    border-color: darkred;
+    color: darkred;
+}
+table#presente th,
+table#presente td {
+    border-color: green;
+    color: green;
+}
+form input[type="submit"],
+button {
+    position: absolute;
+    left: 100px;
+    bottom: 10px;
+    background: navy;
+    color: white;
+    border: none;
+    padding: 6px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
+    transition: box-shadow .1s, background .1s;
+}
+form input[type="submit"]:hover,
+button {
+    background: green;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, .4)
+}
+form input[type="submit"]:active,
+button {
+    background: darkgreen;
+    box-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.7);
+}
+button {
+    bottom: 10px;
+}
+input,
+select {
+    outline: none;
+}
+fieldset {
+    border: 3px dashed rgba(0, 0, 0, .4);
+}
+footer {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
