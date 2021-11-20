@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Miguel"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+    <link rel="apple-touch-icon" href="imagens/favicons/apple-touch-icon.png"/>
+    <link rel="shortcut icon" href="imagens/favicons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicons/favicon-16x16.png" sizes="16x16" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/favicons/favicon-32x32.png" sizes="32x32" type="image/x-icon">
+    <link rel="manifest" href="imagens/favicons/site.webmanifest">
+    <link rel="stylesheet" href="css/index.css"/>
+    <title>Ateliê-Liê</title>
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png"/>
+        <h2>Decorações e doces para você!</h3>
+    </header>
+    <main>
+        <section id="produtos">
+            <p> Produtos:
+                <ul>
+                    <li>Canetas decoradas</li>
+                    <li>MDFs</li>
+                    <li>PhotoCard</li>
+                    <li>Miçangas</li>
+                    <li>Alfajor</li>
+                    <li>Brigadeiro</li>
+                </ul>
+            </p>
+        </section>
+        <section id="precoEstimativa">
+            <p> Insira a quantidade de cada para calcular o preço:</p>
+            
+            <br/>
+
+            <fieldset><legend>Caneta Decorada</legend>
+                <input oninput="valorLimite('canDec')" type="number" min="0" max="20" id="canDec">
+            </fieldset>
+            
+            <br/>
+
+            <fieldset><legend>MDF</legend>
+                <input oninput="valorLimite('mdf')" type="number" min="0" max="20" id="mdf">
+            </fieldset>
+
+            <br/>
+
+            <fieldset><legend>PhotoCard</legend>
+                <input oninput="valorLimite('photoCard')" type="number" min="0" max="20" id="photoCard">
+            </fieldset>
+
+            <br/>
+
+            <fieldset><legend>Miçangas</legend>
+                <input oninput="valorLimite('micangas')" type="number" min="0" max="20" id="micangas">
+            </fieldset>
+
+            <br/>
+
+            <fieldset><legend>Alfajor</legend>
+                <input oninput="valorLimite('alfajor')" type="number" min="0" max="20" id="alfajor">
+            </fieldset>
+
+            <br/>
+
+            <fieldset><legend>Brigadeiro</legend>
+                <input oninput="valorLimite('brigadeiro')" type="number" min="0" max="20" id="brigadeiro">
+            </fieldset>
+            
+            <br/>
+
+            <button onclick="calcularPreco()">CALCULAR</button>
+            
+            <br/>
+
+            <p>R$ <span id="preco">0</span></p>
+        </section>
+        <section id="sobre">
+            <p>Sobre a empresa:
+
+                <br/>
+                <br/>
+                <ul>
+                    <li>Nossos produtos são altamente personalizáveis, para ficar de acordo com o estilo do cliente.</li>
+
+                    <br/>
+
+                    <li>Preço totalmente acessível!</li>
+                </ul>
+
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; Ateliê-Liê</p>
+
+            <p>E-mail: <a href="mailto:atelieliere@gmail.com" title="Clique pra enviar um e-mail.">atelieliere@gmail.com</a></p>
+
+            <p>Instagram: <a href="https://www.instagram.com/atelie__lie/" target="_blank">@atelie__lie</a></p>
+
+            <p>Número: (<span id="ddd"></span>) 9<span class="telNum"></span>-<span class="telNum"></span></p>
+
+            <p>CNPJ: <span class="cnpj2"></span>.<span class="cnpj3"></span>.<span class="cnpj3"></span>/0001-<span class="cnpj2"></span></p>
+
+            <p>Site criado com objetivo estudantil!</p>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
