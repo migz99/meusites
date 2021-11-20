@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Miguel"/>
+    <link rel="stylesheet" href="estilo.css"/>
+    <link rel="shortcut icon" type="image/ico" href="imagens/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="manifest" href="imagens/site.webmanifest">
+    <title>Matemática</title>
+</head>
+<body onload="continha()">
+    <header>
+        <h1>Continhas!</h1>
+    </header>
+    <main>
+        <!-- Números Aleatórios -->
+        <section id="randNums">
+            <p id="numeros"></p>
+        </section>
+        
+        <!-- Resposta -->
+        <section id="resp">
+            <input id="resp_num" type="number" max="2500" min="0" placeholder="RESPOSTA">
+            <button id="reset" onclick="apagar()">X</button>
+            <button id="check" onclick="verificar()">O</button>
+        </section>
+    </main>
+    <script src="js/checagem.js"></script>
+    <script src="js/continha.js"></script>
+</body>
+</html>

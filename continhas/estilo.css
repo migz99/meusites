@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+
+/* Fonte Emily's Candy */
+
+@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
+
+
+
+/* Configuração do Site */
+
+:root {
+    --cor1: #51FB4B;
+    --cor2: #0AFA00;
+    --cor3: #07C700;
+    --cor4: #287A25;
+    --cor5: #047A00;
+}
+
+::selection {
+    background-color: var(--cor5);
+    color: white;
+}
+
+* {
+    font-family: "Emilys Candy";
+    margin: 0;
+    outline: none;
+}
+
+
+
+/* Principal */
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--cor2), var(--cor4));
+    font-size: 2em;
+    animation: rainbow 120s infinite linear;
+}
+
+
+
+/* Corpo */
+
+h1 {
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    max-width: 280px;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+section {
+    background: white;
+    max-width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+section#randNums {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    color: var(--cor5);
+}
+
+section#resp {
+    margin-top: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+
+section#resp > input#resp_num {
+    font-size: 0.8em;
+    height: 30px;
+    min-width: 170px;
+    padding: 5px;
+    border: 5px solid var(--cor3);
+    border-bottom-left-radius: 5px;
+}
+
+
+
+/* Configuração dos botões */
+
+section#resp > button {
+    font-size: .8em;  
+    border: none;
+    height: 50px;
+    width: 35px;
+    position: absolute;
+}
+
+section#resp > button#reset {
+    background-color: red;
+}
+
+section#resp > button#check {
+    background-color: var(--cor1);
+    right: 10px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+/* Efeito do mouse sobre os botões */
+
+section#resp > button:hover {
+    cursor: pointer;
+}
