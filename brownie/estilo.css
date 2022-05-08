@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+/* Geral */
+*
+{
+    margin: 0;
+    font-family: Barrio;
+}
+
+html,
+body
+{
+    height: 100%;
+    width: 100%;
+}
+
+/* Corpo */
+body
+{
+    font-size: 2.8em;
+    background-color: #7C4A2F;
+    background-image: url("imagens/brownie-duplo.png");
+    background-size: 90px;
+    background-position: center;
+    background-blend-mode: soft-light;
+    color: rgb(255, 255, 255);
+}
+
+/* Cabeçalho */
+header
+{
+    padding: 50px 0;
+}
+
+h1
+{
+    text-align: center;
+}
+
+/* Principal */
+main
+{
+    max-width: 200px;
+    background: rgba(255, 255, 255, 0.815);
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    color: black;
+}
+
+/* Span para deixar no fim do parágrafo*/
+p
+{
+    text-align-last: justify;
+}
+
+@media screen and (max-width: 425px) {
+    body
+    {
+        font-size: 2em;
+    }
+
+    main
+    {
+        max-width: 140px;
+    }
+}
