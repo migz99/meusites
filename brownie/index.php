@@ -19,7 +19,7 @@
         <?php
             // Criando diferença de datas com funções;
             $niver = date_create_from_format("d/m/Y", "31/12/2021");
-            $dif = (array) date_diff($niver, date_create());
+            $dif = (array) date_diff($niver, date_create_from_format("d/m/Y", date("d/m/Y")));
 
             // Colocando na tela em anos, meses, semanas, dias;
             echo
