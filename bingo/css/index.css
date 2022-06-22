@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+    background: navy;
+    color: white;
+    font: normal 12pt Roboto;
+}
+section {
+    background: white;
+    color: black;
+    width: 300px;
+    padding: 10px;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.575);
+}
+span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: grey;
+    font-size: 9pt;
+}
+
+/* INPUTS */
+input {
+    outline: none;
+}
+input[type="number"] {
+    width: 70px;
+    position: absolute;
+    right: 50px;
+    top: 34px;
+    text-align: center;
+    border: none;
+    background: navy;
+    color: white;
+    font-size: 14pt;
+}
+input[type="number"][name="max"] {
+    top: 70px;
+}
+input[type="button"] {
+    position: absolute;
+    right: 40px;
+    bottom: 122.5px;
+    border: none;
+    background: navy;
+    color: white;
+    padding: 5px;
+    transition: background .1s;
+}
+input[type="button"][name="rand2"] {
+    bottom: 82.5px;
+}
+input[type="button"]:hover {
+    background: cornflowerblue;
+}
+input[type="button"]:active {
+    background: green;
+}
+input[type="color"] {
+    width: 28px;
+    height: 30px;
+    position: absolute;
+    border: none;
+    background: none;
+    bottom: 120px;
+    left: 150px;
+}
+input[type="color"][name="corDeClick"] {
+    bottom: 80px;
+}
+input[type="submit"] {
+    background: navy;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 2px;
+    transition: background .5s;
+}
+input[type="submit"]:hover {
+    background: cornflowerblue;
+}
+input[type="submit"]:active {
+    background: green;
+}
+input[type="range"] {
+    appearance: none;
+    width: 130px;
+    height: 5px;
+    border-radius: 10px;
+    background: navy;
+    margin-left: 57px;
+}
+input[type="range"][name="lin"] {
+    margin-left: 68px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    background: cornflowerblue;
+}
+@media screen and (max-width: 337px) {
+    section {
+        width: 270px;
+    }
+    input[type="range"] {
+        width: 100px;
+    }
+    input[type="button"] {
+        font-size: 9pt;
+        right: 25px;
+        margin-bottom: 2px;
+    }
+    span {
+        font-size: 8pt;
+    }
+}

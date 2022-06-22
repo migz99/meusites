@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+    font: normal 30pt Roboto;
+    color: white;
+    background: navy;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 50px;
+}
+table caption {
+    background: cornflowerblue;
+    border: 5px solid black;
+    border-bottom: none;
+}
+td {
+    border: 5px solid black;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    background: navy;
+    text-align: center;
+}
+span {
+    color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 594px) and (min-width: 461px) {
+    body {
+        font: normal 22pt Roboto;
+    }
+    td {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 460px) {
+    body {
+        font: normal 15pt Roboto;
+    }
+    td {
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Miguel"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="imagens/android-chrome-512x512.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="imagens/android-chrome-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png"/>
+    <link rel="manifest" href="imagens/site.webmanifest"/>
+    <title>BINGO</title>
+</head>
+<body>
+    <section>
+        <span>Quando entrar na sala, não reinicie a página!</span>
+        <form method="POST" action="bingo.php">
+            <fieldset>
+                <legend>Números Sorteados</legend>
+                Mínimo: <input type="number" min="1" max="10" value="1" name="min" required/>
+                <br/><br/>
+                Máximo: <input type="number" min="70" max="1000" value="90" name="max" required/>
+                <br/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Tamanho & Cores</legend>
+
+                Colunas: <input type="range" min="4" max="7" name="col" value="6" id="col" oninput="document.querySelector('label#labelCol').innerHTML = this.value" required/>
+                <label id="labelCol" for="col">6</label>
+                <br/><br/>
+
+                Linhas: <input type="range" min="4" max="7" name="lin" value="6" oninput="document.querySelector('label#labelLin').innerHTML = this.value" required/>
+                <label id="labelLin" for="lin">6</label>
+                <br/><br/>
+
+                Cor de Fundo: <input type="color" name="corDeFundo" value="#0000ff"/>
+
+                <input type="button" onclick="document.querySelector('input[name=\'corDeFundo\']').value = CorAleatoria()" value="ALEATÓRIO" name="rand1"/>
+                <br/><br/>
+
+                Cor para Marcar: <input type="color" name="corDeClick" value="#ff0000"/>
+
+                <input type="button" onclick="document.querySelector('input[name=\'corDeClick\']').value = CorAleatoria()" value="ALEATÓRIO" name="rand2"/>
+                <br/><br/>
+            </fieldset>
+            <input type="submit" value="CRIAR"/>
+        </form>
+    </section>
+    <script>
+        function NumeroAleatorio(min = 1, max = 10) {
+            return Math.floor(Math.random() * 10 + 1) - min
+        }
+        function CorAleatoria() {
+            const hex = "ABCDEF0123456789"
+            var color = "#"
+            for (i = 0; i < 6; i++) {
+                color += hex[NumeroAleatorio(0, 15)]
+            }
+            return color
+        }
+    </script>
+</body>
+</html>
